@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coming Soon</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html { height: 100%; font-family: Arial, sans-serif; }
+
+    .background {
+      background-image: url('https://i.imgur.com/oub6xkq.jpeg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;          /* full viewport height */
+      display: flex;
+      align-items: flex-end;  /* move content to bottom */
+      justify-content: center; /* center horizontally */
+      text-align: center;
+      color: white;
+      padding-bottom: 40px;   /* <-- semicolon fixed here */
+      text-shadow: 2px 2px 4px #000;
+    }
+
+
+    h1 { font-size: 3rem; }
+    p { font-size: 1.5rem; }
+  </style>
+</head>
+<body>
+  <div class="background">
+    <div>
+      <h1>Website Coming Soon</h1>
+      <p>Under Development</p>
+    </div>
+  </div>
+</body>
+</html>
