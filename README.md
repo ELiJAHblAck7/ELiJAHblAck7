@@ -10,7 +10,7 @@ In the immortal words of Sheldon Cooper:
 *"I'm not crazy. My mother had me tested."*  
 So trust the process, buckle up, and enjoy the ride.
 
-Check the progress here: [https://ELiJAHblAck7.github.io](https://ELiJAHblAck7.github.io)
+Check the progress here: [https://ELiJAHblAck7.github.io](https://elijahblack7.github.io)
 
 ---
 
