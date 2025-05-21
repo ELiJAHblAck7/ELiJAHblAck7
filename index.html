@@ -1,38 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Coming Soon</title>
+  <title>Enter the Dream</title>
+  
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body, html { height: 100%; font-family: Arial, sans-serif; }
-
-    .background {
-      background-image: url('https://i.imgur.com/oub6xkq.jpeg');
-      background-size: cover;
-      background-position: center;
-      height: 100vh;          /* full viewport height */
-      display: flex;
-      align-items: flex-end;  /* move content to bottom */
-      justify-content: center; /* center horizontally */
-      text-align: center;
-      color: white;
-      padding-bottom: 40px;   /* <-- semicolon fixed here */
-      text-shadow: 2px 2px 4px #000;
+      .monsieur-la-doulaise-regular {
+        font-family: "Monsieur La Doulaise", cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
+    
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+      background-color: black;
     }
 
+      .pinwheel {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 92vmax;
+        height: 92vmax;
+        transform: translate(-50%, -50%);
+        background-image: url('https://github.com/ELiJAHblAck7/ELiJAHblAck7/blob/main/The%20wheel%20.png?raw=true');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        animation: spin 7s linear infinite;
+        z-index: 0;
+        image-rendering: auto;
+        backface-visibility: hidden;
+        will-change: transform;
+      }
 
-    h1 { font-size: 3rem; }
-    p { font-size: 1.5rem; }
+      .enter-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-51%, -52%);
+        z-index: 10;
+        padding: 1rem 2rem;
+        font-size: 6rem;
+        background-color: transparent;
+        border: none;
+        color: #6C02DE;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-shadow:
+            0 0 5px black,
+            0 0 10px black,
+            0 0 20px red,
+            0 0 40px white;
+      }
+            
+
+
+      .enter-button:hover {
+        color: yellow;
+        text-shadow: 0 0 15px yellow, 0 0 30px yellow;
+      }
+
+    @keyframes spin {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
   </style>
+
 </head>
 <body>
-  <div class="background">
-    <div>
-      <h1>Website Coming Soon</h1>
-      <p>Under Development</p>
-    </div>
-  </div>
-</body>
-</html>
