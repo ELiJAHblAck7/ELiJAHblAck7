@@ -1,18 +1,5 @@
-# ELiJAHblAck7's introduction website Coming Soon  🚀
+I’m currently developing a digital art museum—an immersive archive where technology and timeless expression converge. Drawing inspiration from steampunk aesthetics, I see every line of code as part of a greater mechanism: thoughtful, precise, and deeply human.
 
-Welcome to the digital garage — where the code’s brewing and the future’s being written, one line at a time.  
-This website is currently under construction, so consider this your official *pre-launch* invitation. well a pre-lunch for the pre-lunch.
+This isn’t just a project—it’s a restoration of memory through design. I aim to preserve creativity in its rawest form while using modern tools with the elegance of old-world craftsmanship. My work blends visual storytelling, system architecture, and the belief that art and engineering are not opposites, but counterparts in the same symphony.
 
-Feel free to steal my ideas, swipe my code, but remember — you gotta have the keys to drive this beast. #Code not currently unveiled
-No cheating, no shortcuts, just pure, unfiltered collaboration.
-
-In the immortal words of Sheldon Cooper:  
-*"I'm not crazy. My mother had me tested."*  
-So trust the process, buckle up, and enjoy the ride.
-
-Check the progress here: https://dreamer.productions
-
----
-
-**P.S.** The 'tism is strong with this one.  
-Precision, obsession, and a sprinkle of divine madness — all systems go... “let’s roll.” 🚀
+I bring a unique perspective to every project—rooted in tradition, driven by innovation, and guided by a deep respect for both form and function.
