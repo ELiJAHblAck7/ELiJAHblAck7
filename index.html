@@ -6,9 +6,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>first夢tattoo</title>
-  
+  <title>夢</title>
+
   <style>
+    /* Font setup */
     .monsieur-la-doulaise-regular {
       font-family: "Monsieur La Doulaise", cursive;
       font-weight: 555;
@@ -23,6 +24,7 @@
       background-color: black;
     }
 
+    /* Pinwheel animation background */
     .pinwheel {
       position: absolute;
       top: 50%;
@@ -42,11 +44,11 @@
       will-change: transform;
     }
 
-    /* Make spin faster when hovering over the wave text */
     #wave-text:hover ~ .pinwheel {
-      animation-duration: 4.7s; /* 33% faster */
+      animation-duration: 4.7s;
     }
 
+    /* Center glowing enter button text */
     .enter-button {
       white-space: nowrap;
       position: absolute;
@@ -61,11 +63,7 @@
       color: purple;
       cursor: pointer;
       transition: all 0.3s ease;
-      text-shadow:
-          0 0 5px black,
-          0 0 10px black,
-          0 0 20px red,
-          0 0 40px white;
+      font-family: "Monsieur La Doulaise", cursive;
     }
 
     .enter-button:hover {
@@ -73,11 +71,13 @@
       text-shadow: 0 0 15px yellow, 0 0 30px white;
     }
 
+    /* Pinwheel spinning animation */
     @keyframes spin {
       0% { transform: translate(-50%, -50%) rotate(0deg); }
       100% { transform: translate(-50%, -50%) rotate(360deg); }
     }
 
+    /* Zoom and glow pulse animation */
     @keyframes waveZoom {
       0%   { transform: scale(1); opacity: 0.2; }
       30%  { transform: scale(1.4); opacity: 1; }
@@ -89,8 +89,15 @@
       display: inline-block;
       animation: waveZoom 6s ease-in-out infinite;
       animation-fill-mode: both;
+      color: purple;
+      text-shadow:
+        0 0 4px black,
+        0 0 10px red,
+        0 0 20px white,
+        0 0 30px purple;
     }
 
+    /* Delay each character for the wave effect */
     #wave-text span:nth-child(1)  { animation-delay: 0.1s; }
     #wave-text span:nth-child(2)  { animation-delay: 0.2s; }
     #wave-text span:nth-child(3)  { animation-delay: 0.3s; }
@@ -127,10 +134,11 @@
       filter: drop-shadow(0 0 6px white);
     }
   </style>
-
 </head>
+
 <body>
 
+  <!-- Glowing, animated wave text -->
   <div id="wave-text" class="enter-button monsieur-la-doulaise-regular" onclick="location.href='intro.html'">
     <span>B</span><span>e</span><span> </span>
     <span>t</span><span>h</span><span>e</span><span> </span>
@@ -140,9 +148,11 @@
     <span>d</span><span>a</span><span>r</span><span>k</span>
   </div>
 
+  <!-- Background pinwheel -->
   <div class="pinwheel"></div>
 
-   <div style="position: absolute; bottom: 1.5vh; width: 100%; text-align: center; z-index: 5;">
+  <!-- Footer GitHub link -->
+  <div style="position: absolute; bottom: 1.5vh; width: 100%; text-align: center; z-index: 5;">
     <a href="https://github.com/ELiJAHblAck7" target="_blank" aria-label="Visit Elijah Black's GitHub" style="
       font-size: 1.2vw;
       color: rgba(255, 255, 255, 0.3);
