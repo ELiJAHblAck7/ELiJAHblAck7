@@ -2,35 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Intro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dream Page</title>
+
+  <!-- Font Import -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap" rel="stylesheet" />
+
   <style>
-    body {
-      background-color: black;
-      color: white;
-      text-align: center;
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
-    .spinning-image {
-      margin-top: 50px;
-      width: 200px;
-      height: auto;
-      animation: spin 8s linear infinite;
+    body, html {
+      height: 100%;
+      overflow-x: hidden;
+      font-family: sans-serif;
     }
 
-    @keyframes spin {
+    /* Spinning image container full screen */
+    .background-container {
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+    }
+
+    .background-container img {
+      position: absolute;
+      width: 150vw; /* Bigger to cover screen while rotating */
+      height: 150vh;
+      top: -25vh;
+      left: -25vw;
+      object-fit: cover;
+      animation: spinBg 40s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes spinBg {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
+    }
+
+    .quote-section {
+      height: 100vh;
+      background-color: black;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Alumni Sans Pinstripe", sans-serif;
+      font-size: 2rem;
+      padding: 2rem;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <h1>""If you see someone without a smile give them one of yours" Mark "</h1>
-  <p>This is the second page.</p>
+  <!-- Spinning Image -->
+  <div class="background-container">
+    <img src="mark.jpg" alt="Spinning Background" />
+  </div>
 
-  <img src="mark.jpg" alt="Spinning Pinwheel" class="spinning-image" />
+  <!-- Quote Section -->
+  <div class="quote-section">
+    <p>"If you see someone without a smile, give them one of yours." – Mark</p>
+  </div>
 </body>
 </html>
