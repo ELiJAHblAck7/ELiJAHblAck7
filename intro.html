@@ -6,19 +6,34 @@
   <title>Intro</title>
   <style>
     body {
-      background-color: black;
-      color: white;
-      text-align: center;
-      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      background: url('mark.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .content {
+      background-color: rgba(0, 0, 0, 0.6); /* Optional: dark overlay for better text readability */
+      padding: 2rem;
+      border-radius: 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
 
     .spinning-image {
-      margin-top: 50px;
-      width: 200px;
-      height: auto;
-      animation: spin 8s linear infinite;
+      margin-top: 20px;
+      width: 150px;
+      animation: spin 6s linear infinite;
     }
 
     @keyframes spin {
@@ -28,8 +43,12 @@
   </style>
 </head>
 <body>
-  <h1>""If you see someone without a smile give them one of yours" Mark "</h1>
-  <p>This is the second page.</p>
+  <div class="content">
+    <h1>"If you see someone without a smile, give them one of yours." – Mark</h1>
+    <img src="mark.jpg" alt="Spinning Pinwheel" class="spinning-image" />
+  </div>
+</body>
+</html>
 
   <img src="mark.jpg" alt="Spinning Pinwheel" class="spinning-image" />
 </body>
