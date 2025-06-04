@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Intro</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .spinning-image {
+      margin-top: 50px;
+      width: 200px;
+      height: auto;
+      animation: spin 8s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <h1>""If you see someone without a smile give them one of yours" Mark "</h1>
+  <p>This is the second page.</p>
+
+  <img src="mark.jpg" alt="Spinning Pinwheel" class="spinning-image" />
+</body>
+</html>
