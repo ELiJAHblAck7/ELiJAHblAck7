@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dream Page</title>
 
-  <!-- Font Import -->
+  <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap" rel="stylesheet" />
@@ -17,47 +17,64 @@
       box-sizing: border-box;
     }
 
-    body, html {
+    html, body {
       height: 100%;
-      overflow-x: hidden;
-      font-family: sans-serif;
-    }
-
-    /* Spinning background full-screen */
-    .background-container {
-      height: 100vh;
-      background: url('Mark .jpg') no-repeat center center fixed;
-      background-size: cover;
-      animation: spinBg 40s linear infinite;
-    }
-
-    @keyframes spinBg {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    /* Quote section BELOW the spinning pinwheel */
-    .quote-section {
-      height: 100vh;
       background-color: black;
+      font-family: "Alumni Sans Pinstripe", sans-serif;
       color: white;
+      scroll-behavior: smooth;
+    }
+
+    /* Top spinning image section */
+    .spinning-mark {
+      width: 100vw;
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: "Alumni Sans Pinstripe", sans-serif;
-      font-size: 2rem;
+      background-color: black;
+    }
+
+    .spin-circle {
+      width: 97vmin;
+      height: 97vmin;
+      background-image: url('Mark.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 50%;
+      animation: spin 60s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Quote section */
+    .quote-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 2rem;
+      font-size: 2rem;
       text-align: center;
+      background-color: black;
     }
   </style>
 </head>
 <body>
-  <!-- Spinning Background -->
-  <div class="background-container"></div>
 
-  <!-- Quote Section -->
+  <!-- Spinning image section -->
+  <div class="spinning-mark">
+    <div class="spin-circle"></div>
+  </div>
+
+  <!-- Scroll-down quote section -->
   <div class="quote-section">
     <p>"If you see someone without a smile, give them one of yours." – Mark</p>
   </div>
+
 </body>
 </html>
