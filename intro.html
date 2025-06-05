@@ -36,20 +36,47 @@
     }
 
     .spin-circle {
+      position: relative;
       width: 97vmin;
       height: 97vmin;
-      background-image: url('https://raw.githubusercontent.com/ELiJAHblAck7/ELiJAHblAck7/main/mark.jpg');
+      background-image: url('mark.jpg'); /* make sure this path is correct */
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
       border-radius: 50%;
-      animation: spin 43s linear infinite;
+      animation: spin 10s linear infinite; /* faster spin */
+      overflow: hidden;
     }
-    
 
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
+    }
+
+    /* Ripple animation */
+    .ripple {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      transform: translate(-50%, -50%);
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      animation: rippleEffect 2s infinite ease-out;
+    }
+
+    @keyframes rippleEffect {
+      0% {
+        width: 0px;
+        height: 0px;
+        opacity: 1;
+      }
+      100% {
+        width: 200px;
+        height: 200px;
+        opacity: 0;
+      }
     }
 
     /* Quote section */
@@ -69,7 +96,9 @@
 
   <!-- Spinning image section -->
   <div class="spinning-mark">
-    <div class="spin-circle"></div>
+    <div class="spin-circle">
+      <div class="ripple"></div>
+    </div>
   </div>
 
   <!-- Scroll-down quote section -->
