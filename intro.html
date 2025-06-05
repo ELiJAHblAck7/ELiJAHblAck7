@@ -25,7 +25,6 @@
       scroll-behavior: smooth;
     }
 
-    /* Spinning glowing image section */
     .spinning-mark {
       width: 100vw;
       height: 100vh;
@@ -38,16 +37,12 @@
     .spin-circle {
       width: 95vmin;
       height: 95vmin;
-      background-image: url('mark.jpg'); /* Make sure mark.jpg is in the same folder */
+      background-image: url('mark.jpg'); /* <-- make sure it's correctly placed or linked */
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
       border-radius: 50%;
-      animation: spin 30s linear infinite, glowPulse 3.6s ease-in-out infinite, scalePulse 6s ease-in-out infinite;
-      box-shadow:
-        0 0 20px rgba(255, 0, 255, 0.4),
-        0 0 50px rgba(255, 255, 255, 0.1),
-        0 0 120px rgba(255, 0, 255, 0.2);
+      animation: spin 20s linear infinite;
     }
 
     @keyframes spin {
@@ -55,31 +50,6 @@
       100% { transform: rotate(360deg); }
     }
 
-    @keyframes glowPulse {
-      0%, 100% {
-        box-shadow:
-          0 0 10px rgba(255, 0, 255, 0.2),
-          0 0 40px rgba(255, 255, 255, 0.05),
-          0 0 80px rgba(255, 0, 255, 0.1);
-      }
-      50% {
-        box-shadow:
-          0 0 30px rgba(255, 0, 255, 0.5),
-          0 0 80px rgba(255, 255, 255, 0.1),
-          0 0 160px rgba(255, 0, 255, 0.2);
-      }
-    }
-
-    @keyframes scalePulse {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.02);
-      }
-    }
-
-    /* Quote section */
     .quote-section {
       min-height: 100vh;
       display: flex;
@@ -94,12 +64,10 @@
 </head>
 <body>
 
-  <!-- Spinning image section -->
   <div class="spinning-mark">
     <div class="spin-circle"></div>
   </div>
 
-  <!-- Scroll-down quote section -->
   <div class="quote-section">
     <p>"If you see someone without a smile, give them one of yours." – Mark</p>
   </div>
