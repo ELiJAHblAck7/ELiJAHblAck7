@@ -6,4 +6,3 @@ I bring a unique perspective to every project—rooted in tradition, driven by i
 
 i have cleaver way of treatment for hib snd cansir l
 
-https://youtube.com/shorts/72Li8PdT-XA?si=Hy1SLbvH3-DCu6Po
