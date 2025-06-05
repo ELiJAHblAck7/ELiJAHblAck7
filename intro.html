@@ -25,7 +25,7 @@
       scroll-behavior: smooth;
     }
 
-    /* Top spinning image section */
+    /* Spinning glowing image section */
     .spinning-mark {
       width: 100vw;
       height: 100vh;
@@ -36,16 +36,18 @@
     }
 
     .spin-circle {
-      position: relative;
-      width: 97vmin;
-      height: 97vmin;
-      background-image: url('mark.jpg'); /* make sure this path is correct */
-      background-size: contain;
+      width: 95vmin;
+      height: 95vmin;
+      background-image: url('mark.jpg'); /* Make sure mark.jpg is in the same folder */
+      background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
       border-radius: 50%;
-      animation: spin 10s linear infinite; /* faster spin */
-      overflow: hidden;
+      animation: spin 30s linear infinite, glowPulse 3.6s ease-in-out infinite, scalePulse 6s ease-in-out infinite;
+      box-shadow:
+        0 0 20px rgba(255, 0, 255, 0.4),
+        0 0 50px rgba(255, 255, 255, 0.1),
+        0 0 120px rgba(255, 0, 255, 0.2);
     }
 
     @keyframes spin {
@@ -53,29 +55,27 @@
       100% { transform: rotate(360deg); }
     }
 
-    /* Ripple animation */
-    .ripple {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 20px;
-      height: 20px;
-      transform: translate(-50%, -50%);
-      border: 2px solid rgba(255, 255, 255, 0.5);
-      border-radius: 50%;
-      animation: rippleEffect 2s infinite ease-out;
+    @keyframes glowPulse {
+      0%, 100% {
+        box-shadow:
+          0 0 10px rgba(255, 0, 255, 0.2),
+          0 0 40px rgba(255, 255, 255, 0.05),
+          0 0 80px rgba(255, 0, 255, 0.1);
+      }
+      50% {
+        box-shadow:
+          0 0 30px rgba(255, 0, 255, 0.5),
+          0 0 80px rgba(255, 255, 255, 0.1),
+          0 0 160px rgba(255, 0, 255, 0.2);
+      }
     }
 
-    @keyframes rippleEffect {
-      0% {
-        width: 0px;
-        height: 0px;
-        opacity: 1;
+    @keyframes scalePulse {
+      0%, 100% {
+        transform: scale(1);
       }
-      100% {
-        width: 200px;
-        height: 200px;
-        opacity: 0;
+      50% {
+        transform: scale(1.02);
       }
     }
 
@@ -96,9 +96,7 @@
 
   <!-- Spinning image section -->
   <div class="spinning-mark">
-    <div class="spin-circle">
-      <div class="ripple"></div>
-    </div>
+    <div class="spin-circle"></div>
   </div>
 
   <!-- Scroll-down quote section -->
